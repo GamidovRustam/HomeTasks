@@ -22,6 +22,11 @@ Solved homeworks for Go Java Course
     
     Comments:
       - I pasted 3 UML diagrams in one image (for easiest viewing).
-      - In my opinion, the text of this assignment is controversial.  
+      - In my opinion, the text of this assignment is controversial.
+
+
+  Task 3.
+
+  Написать классы на Java соответствующие UML диаграммам из задания к Модулю 2. Создать проект с исходниками и загрузить его на GitHub.
       
   
