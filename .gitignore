@@ -1,6 +1,7 @@
 # folder
 .idea/*
 out/*
+otherTests/*
 
 # class files
 *.class
