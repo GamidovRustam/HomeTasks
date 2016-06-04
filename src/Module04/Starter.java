@@ -9,7 +9,6 @@ import java.util.Scanner;
 public class Starter {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         CounterOfShapesArea countArea = new CounterOfShapesArea();
         System.out.println("Let's calculate some shapes area, and we begin with triangle.");
         System.out.println("Enter the hight of triangle:");
