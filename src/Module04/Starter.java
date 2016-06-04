@@ -1,5 +1,6 @@
 package Module04;
-
+//по возможности не используй импорт со *. Указывай какой класс импортируешь
+//введи дробное число или символ - найди баг
 import Module04.Task1.*;
 import Module04.Task2.*;
 import Module04.Task3.*;
@@ -24,7 +25,7 @@ public class Starter {
                 System.out.println("Triangle area = " + countArea.countTriangleArea(triangleHight, triangleBase) + " square meters");
             } else {
                 System.out.println("not correct! Please, enter the number in format # or #.#:");
-            }
+            }//запрашивается формат # or #.#, но дробные числа принять не можем
         } else {
             System.out.println("not correct! Please, enter the number in format # or #.#:");
         }
@@ -94,7 +95,7 @@ public class Starter {
         double pointAY;
         double pointBX;
         double pointBY;
-
+        //очень много одинаковых кусков кода. Подумай, как это можно оптимизировать
         if (sc.hasNextDouble()) {
             pointAX = sc.nextDouble();
             System.out.println("Enter point A coordinate Y");
@@ -120,3 +121,6 @@ public class Starter {
         }
     }
 }
+//если не знаешь еще как обрабатывать ошибки или делать циклы - может лучше тогда заканчивать программу
+// и говорить что-то вроде: "вы ввели данные в неверном формате, поэтому программа завершает работу".
+// И закончить выполнение. Чем выводить некорректную информацию

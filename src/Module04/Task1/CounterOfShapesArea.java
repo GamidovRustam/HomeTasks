@@ -4,7 +4,7 @@ public class CounterOfShapesArea {
     public double countTriangleArea(double base, double hight){
         return (base * hight)*0.5;
     }
-
+    //зачем нам создавать обьект для вызова этих методов? Что если сделать их статическими?
     public double countRectangleArea(double sideA, double sideB){
         return sideA * sideB;
     }
