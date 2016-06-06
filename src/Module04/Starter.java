@@ -1,123 +1,122 @@
 package Module04;
 //по возможности не используй импорт со *. Указывай какой класс импортируешь
 //введи дробное число или символ - найди баг
-import Module04.Task1.*;
-import Module04.Task2.*;
-import Module04.Task3.*;
+import Module04.Task1.CounterOfShapesArea;
+import Module04.Task2.TemperatureConverter;
+import Module04.Task3.DistanceCalculator;
 
 import java.util.Scanner;
 
 public class Starter {
     public static void main(String[] args) {
+        String error = "not correct! Please,restart program and enter the number in format # or #,#:";
+
         Scanner sc = new Scanner(System.in);
         CounterOfShapesArea countArea = new CounterOfShapesArea();
         System.out.println("Let's calculate some shapes area, and we begin with triangle.");
         System.out.println("Enter the hight of triangle:");
 
-        double triangleBase;
-        double triangleHight;
-
         if (sc.hasNextDouble()) {
-            triangleHight = sc.nextDouble();
+            countArea.setTriangleHight(sc.nextDouble());
             System.out.println("now enter the lenght of the base:");
             if (sc.hasNextDouble()) {
-                triangleBase = sc.nextDouble();
-                System.out.println("Triangle area = " + countArea.countTriangleArea(triangleHight, triangleBase) + " square meters");
-            } else {
-                System.out.println("not correct! Please, enter the number in format # or #.#:");
-            }//запрашивается формат # or #.#, но дробные числа принять не можем
-        } else {
-            System.out.println("not correct! Please, enter the number in format # or #.#:");
-        }
-
-        System.out.println("Well done! Now let's calculate the rectangle area.");
-        System.out.println("enter sideA lenght:");
-        double rectSideA;
-        double rectSideB;
-
-        if (sc.hasNextDouble()) {
-            rectSideA = sc.nextDouble();
-            System.out.println("and sideB:");
-            if (sc.hasNextDouble()) {
-                rectSideB = sc.nextDouble();
-                System.out.println("Rectangle area = " + countArea.countRectangleArea(rectSideA, rectSideB) + " square meters");
-            } else {
-                System.out.println("not correct! Please, enter the number in format # or #.#:");
-            }
-        } else {
-            System.out.println("not correct! Please, enter the number in format # or #.#:");
-        }
-
-        System.out.println("And the last shape is a circle:");
-        System.out.println("enter the radius of a circle:");
-
-        double radius;
-
-        if (sc.hasNextDouble()) {
-            radius = sc.nextDouble();
-            System.out.println("Circle area = " + countArea.countCircleArea(radius) + " square meters");
-        } else {
-            System.out.println("not correct! Please, enter the number in format # or #.#:");
-        }
+                countArea.setTriangleBase(sc.nextDouble());
+                System.out.println("Triangle area = " +
+                                    countArea.countTriangleArea(countArea.getTriangleHight(), countArea.getTriangleBase())
+                                    + " square meters");
+                System.out.println("");
 
 
-        TemperatureConverter temperature = new TemperatureConverter();
-        System.out.println("Now, you can convert the temperature grades.");
-        System.out.println("enter the Celsius grades:");
-
-        double celsius;
-
-        if (sc.hasNextDouble()) {
-            celsius = sc.nextDouble();
-            System.out.println("in Fahrenheit it will be " + temperature.convertCtoF(celsius));
-        } else {
-            System.out.println("not correct! Please, enter the number in format # or #.#:");
-        }
-
-
-        System.out.println("and Fahrenheit to Celsius (enter grades):");
-
-        double fahrenheit;
-
-        if (sc.hasNextDouble()) {
-            fahrenheit = sc.nextDouble();
-            System.out.println("in Celsius it will be " + temperature.convertFtoC(fahrenheit));
-        } else {
-            System.out.println("not correct! Please, enter the number in format # or #.#:");
-        }
-
-
-        DistanceCalculator distance = new DistanceCalculator();
-        System.out.println("Ok! Now you can calculate the distance between 2 points");
-        System.out.println("Enter point A coordinate X");
-
-        double pointAX;
-        double pointAY;
-        double pointBX;
-        double pointBY;
-        //очень много одинаковых кусков кода. Подумай, как это можно оптимизировать
-        if (sc.hasNextDouble()) {
-            pointAX = sc.nextDouble();
-            System.out.println("Enter point A coordinate Y");
-            if (sc.hasNextDouble()) {
-                pointAY = sc.nextDouble();
-                System.out.println("Enter point B coordinate X");
+                System.out.println("Well done! Now let's calculate the rectangle area.");
+                System.out.println("enter sideA lenght:");
                 if (sc.hasNextDouble()) {
-                    pointBX = sc.nextDouble();
-                    System.out.println("Enter point B coordinate Y");
+                    countArea.setRectSideA(sc.nextDouble());
+                    System.out.println("and sideB:");
                     if (sc.hasNextDouble()) {
-                        pointBY = sc.nextDouble();
-                        System.out.println(distance.countDistance(pointAX, pointAY, pointBX, pointBY));
+                        countArea.setRectSideB(sc.nextDouble());
+                        System.out.println("Rectangle area = " +
+                                            countArea.countRectangleArea(countArea.getRectSideA(), countArea.getRectSideB()) +
+                                            " square meters");
+                        System.out.println("");
+
+                        System.out.println("And the last shape is a circle:");
+                        System.out.println("enter the radius of a circle:");
+
+                        if (sc.hasNextDouble()) {
+                            countArea.setRadius(sc.nextDouble());
+                            System.out.println("Circle area = " + countArea.countCircleArea(countArea.getRadius()) + " square meters");
+                            System.out.println("");
+
+
+                            TemperatureConverter temperature = new TemperatureConverter();
+                            System.out.println("Now, you can convert the temperature grades.");
+                            System.out.println("enter the Celsius grades:");
+
+                            if (sc.hasNextDouble()) {
+                                temperature.setCelsius(sc.nextDouble());
+                                System.out.println("in Fahrenheit it will be " + temperature.convertCtoF(temperature.getCelsius()));
+                                System.out.println("and Fahrenheit to Celsius (enter grades):");
+
+                                if (sc.hasNextDouble()) {
+                                    temperature.setFahrenheit(sc.nextDouble());
+                                    System.out.println("in Celsius it will be " + temperature.convertFtoC(temperature.getFahrenheit()));
+                                    System.out.println("");
+
+
+                                    DistanceCalculator distance = new DistanceCalculator();
+                                    System.out.println("Ok! Now you can calculate the distance between 2 points");
+                                    System.out.println("Enter point A coordinate X");
+                                    //очень много одинаковых кусков кода. Подумай, как это можно оптимизировать
+                                    if (sc.hasNextDouble()) {
+                                        distance.setPointAX(sc.nextDouble());
+                                        System.out.println("Enter point A coordinate Y");
+                                        if (sc.hasNextDouble()) {
+                                            distance.setPointAY(sc.nextDouble());
+                                            System.out.println("Enter point B coordinate X");
+                                            if (sc.hasNextDouble()) {
+                                                distance.setPointBX(sc.nextDouble());
+                                                System.out.println("Enter point B coordinate Y");
+                                                if (sc.hasNextDouble()) {
+                                                    distance.setPointBY(sc.nextDouble());
+                                                    System.out.println("The distance between point's A and B = "
+                                                                        +distance.countDistance(distance.getPointAX(),
+                                                                                                distance.getPointAY(),
+                                                                                                distance.getPointBX(),
+                                                                                                distance.getPointBY())+
+                                                                        " meters.");
+                                                    System.out.println("That's all! Bye!");
+                                                } else {
+                                                    System.out.println(error);
+                                                }
+                                            } else {
+                                                System.out.println(error);
+                                            }
+                                        } else {
+                                            System.out.println(error);
+                                        }
+                                    }
+                                } else {
+                                    System.out.println(error);
+                                }//запрашивается формат # or #.#, но дробные числа принять не можем
+                            } else {
+                                System.out.println(error);
+                            }
+                        } else {
+                            System.out.println(error);
+                        }
                     } else {
-                        System.out.println("not correct! Please, enter the number in format # or #.#:");
-                        System.out.println("That's all! Bye!");
+                        System.out.println(error);
                     }
                 } else {
-                    System.out.println("not correct! Please, enter the number in format # or #.#:");
+                    System.out.println(error);
                 }
+
             } else {
-                System.out.println("not correct! Please, enter the number in format # or #.#:");
+                System.out.println(error);
             }
+
+        } else {
+            System.out.println(error);
         }
     }
 }
