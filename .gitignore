@@ -1,8 +1,8 @@
 # folder
 .idea/*
 out/*
-/src/otherTests/*
+/src/otherTests/
 
 # class files
 *.class
-/Homeworks.iml
+*.iml
