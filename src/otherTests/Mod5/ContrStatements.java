@@ -3,7 +3,7 @@ package otherTests.Mod5;
 import java.util.Scanner;
 
 public class ContrStatements {
-    public static final double PI = 3.14;
+//    public static final double PI = 3.14;
 
     public static void main(String[] args) {
         final Scanner sc = new Scanner(System.in);

@@ -8,7 +8,7 @@ public class ArrayAndLoops {
 
 //        Сортировка Пузырьком:
 //        boolean swapOccured = true;
-//
+
 //        while (swapOccured){
 //            swapOccured = false;
 //            for (int i = 0; i < doubleArray.length - 1; i++){

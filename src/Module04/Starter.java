@@ -38,7 +38,6 @@ public class Starter {
                                             countArea.countRectangleArea(countArea.getRectSideA(), countArea.getRectSideB()) +
                                             " square meters");
                         System.out.println("");
-
                         System.out.println("And the last shape is a circle:");
                         System.out.println("enter the radius of a circle:");
 

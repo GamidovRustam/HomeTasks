@@ -9,3 +9,6 @@ out/*
 
 # other files
 *.iml
+src/otherTests/Mod4/Jedi.java
+src/otherTests/Mod5/ArrayAndLoops.java
+src/otherTests/Mod5/ContrStatements.java

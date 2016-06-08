@@ -6,7 +6,7 @@ public class Jedi {
 //    private String name;
 //    private int childrenNumber;
 //    private boolean isOnDarkSide;
-//
+
 //    public int getChildrenNumber() {
 //        return childrenNumber;
 //    }
