@@ -1,8 +1,11 @@
 # folder
+/src/otherTests/
 .idea/*
 out/*
-/src/otherTests/
+
 
 # class files
 *.class
+
+# other files
 *.iml
