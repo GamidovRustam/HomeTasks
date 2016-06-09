@@ -1,5 +1,7 @@
 package Module05;
 
+import java.util.Arrays;
+
 public class ArraysSort {
     // this method finds the maximal value of array
     public int findMaxValue(int[] arr){
@@ -48,25 +50,52 @@ public class ArraysSort {
 
     // this method sorts array by using 'Selection' algorithm
     public int[] selectSort(int[] arr){
-        int[] sortedArr = arr;
         int index = 0;
         int min = 0;
 
-        for (int i = 0; i < sortedArr.length; i++){
-            min = sortedArr[i];
+        for (int i = 0; i < arr.length; i++){
+            min = arr[i];
             index = i;
 
-            for (int a = i + 1; a < sortedArr.length; a++){
-                if (sortedArr[a] < min){
+            for (int a = i + 1; a < arr.length; a++){
+                if (arr[a] < min){
                     index = a;
-                    min = sortedArr[a];
+                    min = arr[a];
                 }
             }
-            if (sortedArr[i] != sortedArr[index]) {
-                sortedArr[index] = sortedArr[i];
-                sortedArr[i] = min;
+            if (arr[i] != arr[index]) {
+                arr[index] = arr[i];
+                arr[i] = min;
             }
         }
-        return sortedArr;
+        return arr;
     }
 }
+
+//стр4
+//комментарии бывают нужны, когда они нужны)
+//но в данном случае я по хороему назавнию метода иего сигнатуре и так понятно что этот метод делает.
+//Тратится лишнее время на прочтение комментария
+//Если счтаешь их нужными - можешь оставить. Не критично
+
+//форматирование
+//в методах сортировки циклы выделены пустыми строками, а в поиске максимумов - нет. Приведи к одному виду
+
+//для верхнего цикла принято использовать переменную i, для следующего вложенного - j.
+//Пременная "а" во втором цикле сбивает с толку
+
+//стр7...
+//Перед открывающей фигурной скобкой - пробел
+//http://www.oracle.com/technetwork/java/javase/documentation/codeconventions-141388.html
+
+//стр3
+//public class ArraysSort - но класс то не только сортирует массивы, но еще и находит граничные значения.
+
+//Найди баг, который указан в классе Runner
+
+//ненужный импорт?
+
+//'for' loop replaceable with 'foreach'
+
+//стр53, 54
+//нет необходимости зжесь явно инициализировать нулем. Это произойдет автоматически. СЕйчас это антипаттерн magic number
