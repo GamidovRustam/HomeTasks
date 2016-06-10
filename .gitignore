@@ -1,11 +1,13 @@
-# folder
-src/Other/*
-.idea/*
-out/*
-
 # class files
 *.class
 
 # other files
 Homeworks.iml
 *.iml
+
+# folder
+src/Other/*
+.idea/*
+out/*
+
+
