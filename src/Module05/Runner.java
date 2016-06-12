@@ -2,37 +2,26 @@ package module05;
 
 import java.util.Arrays;
 
+import static module05.ArraysMethods.*;
+
 public class Runner {
     public static void main(String[] args){
         int lenght = 10;
-        int intArr1[] = new int[lenght];
+        int[] intArr = new int[lenght];
 
-        ArraysMethods arrMeth = new ArraysMethods();
+        System.out.println("Array before sorting:\n" + Arrays.toString(setRandomValues(intArr)) + "\n");
 
-        arrMeth.setRandomValues(intArr1);
-        System.out.println("Array's elements before sorting:\n" + Arrays.toString(intArr1) + "\n");
+        System.out.println("maximal value = " + findMaxValue(intArr));
+        System.out.println("minimal value = " + findMinValue(intArr) + "\n");
 
-        int max = arrMeth.findMaxValue(intArr1);
-        System.out.println("maximal value = " + max);
-        int min = arrMeth.findMinValue(intArr1);
-        System.out.println("minimal value = " + min + "\n");
-
-        int bubbleSortedArr[] = arrMeth.sortBubble(intArr1);
-        System.out.println("Array is sorted by using \"Bubble\" algorithm:\n" + Arrays.toString(bubbleSortedArr) + "\n");
-
-
-        int intArr2[] = new int[lenght];
-
-        arrMeth.setRandomValues(intArr2);
-        System.out.println("Now we are going to sort next array:\n" + Arrays.toString(intArr2) + "\n");
-        System.out.println("Array is sorted by using \"Selection\" algorithm:");
-        int selectSortedArr[] = arrMeth.sortSelection(intArr2);
-        System.out.println(Arrays.toString(selectSortedArr));
-
+        System.out.println("Array is sorted by using \"Bubble\" algorithm:\n" +
+                            Arrays.toString(sortBubble(intArr.clone())) + "\n");
+//        System.out.println("Now we are going to sort next array:\n" + Arrays.toString(intArr) + "\n");
+        System.out.println("Array is sorted by using \"Selection\" algorithm:" + "\n" +
+                            Arrays.toString(sortSelection(intArr.clone())));
     }
 }
-
-//папка Module05 != пакет module05
+//папка module05 != пакет module05
 
 //Создать второй массив и передавать его во второй метод сортировки - это не решение бага.
 //Ты хочешь передать новый отсортированный массив и оставить оригинальный неизменным. Но оригинальный тоже меняется.
