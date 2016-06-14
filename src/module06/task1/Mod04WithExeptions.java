@@ -1,4 +1,4 @@
-package Module04;
+package module06.task1;
 
 import Module04.Task1.CounterOfShapesArea;
 import Module04.Task2.TemperatureConverter;
@@ -8,7 +8,7 @@ import module06.task1.chekInput.CheckInput;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class StarterWithExeptions {
+public class Mod04WithExeptions {
     private static String error = "ERROR: Please,restart program and enter just numbers in format # or #,#:";
 
     public static void main(String[] args) {

@@ -9,6 +9,8 @@ public class Runner {
         int lenght = 10;
         int[] intArr = new int[lenght];
 
+
+
         System.out.println("Array before sorting:\n" + Arrays.toString(setRandomValues(intArr)) + "\n");
 
         System.out.println("maximal value = " + findMaxValue(intArr));
