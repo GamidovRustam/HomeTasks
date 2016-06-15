@@ -3,20 +3,20 @@ package module06.task1.chekInput;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class CheckInput extends Exception{
+public class CheckInput extends Exception {
 
     public static double ifBiggerThanZeroDouble() {
         double userInput = 0;
         boolean lessThanZero = true;
 
-            while (lessThanZero) {
-                    userInput = ifDouble();
-                if (userInput <= 0) {
-                    System.out.println("Wrong! Please, enter the number bigger than zero:");
-                } else {
-                    lessThanZero = false;
-                }
+        while (lessThanZero) {
+            userInput = ifDouble();
+            if (userInput <= 0) {
+                System.out.println("Wrong! Please, enter the number bigger than zero:");
+            } else {
+                lessThanZero = false;
             }
+        }
         return userInput;
     }
 
@@ -33,14 +33,29 @@ public class CheckInput extends Exception{
             }
         }
         return userInput;
+    }
+
+    public static double ifNegativeValueDouble() {
+        double userInput = 0;
+        boolean lessThanZero = true;
+
+        while (lessThanZero) {
+            userInput = ifDouble();
+            if (userInput < 0) {
+                System.out.println("Wrong! Please, enter the number bigger than zero:");
+            } else {
+                lessThanZero = false;
             }
+        }
+        return userInput;
+    }
 
     public static int ifNegativeValueInt() {
         int userInput = 0;
         boolean lessThanZero = true;
 
         while (lessThanZero) {
-                userInput = ifInt();
+            userInput = ifInt();
             if (userInput < 0) {
                 System.out.println("Wrong! Please, enter the number bigger than zero:");
             } else {
@@ -51,24 +66,31 @@ public class CheckInput extends Exception{
     }
 
 
-    public static double ifDouble() throws InputMismatchException{
+    public static double ifDouble() throws InputMismatchException {
         Scanner sc = new Scanner(System.in);
-        return sc.nextDouble();
+        double d;
+        try {
+            d = sc.nextDouble();
+        } catch (InputMismatchException e) {
+            System.out.println("Wrong! Please, enter the number # or #,#:");
+            d = ifDouble();
+        }
+        return d;
     }
 
-    public static int ifInt() throws InputMismatchException{
+    public static int ifInt() throws InputMismatchException {
         Scanner sc = new Scanner(System.in);
         int i;
         try {
             i = sc.nextInt();
-        }catch (InputMismatchException e) {
+        } catch (InputMismatchException e) {
             System.out.println("Wrong! Please, enter the number:");
             i = ifInt();
         }
         return i;
     }
 
-    }
+}
 
 
 
