@@ -3,7 +3,7 @@ package module06.task1.chekInput;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class CheckInput {
+public class CheckInput extends Exception{
     public static double ifBiggerThanZeroDouble() {
         double userInput = 0;
         boolean lessThanZero = true;
