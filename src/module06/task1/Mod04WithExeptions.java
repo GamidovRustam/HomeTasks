@@ -15,13 +15,13 @@ class Mod04WithExeptions {
                 + "Enter the hight of triangle:");
         try {
             setTriangleHight(inputBiggerThanZeroDouble());
-            System.out.println("now enter the lenght of the base:");
+            System.out.println("now enter the length of the base:");
             setTriangleBase(inputBiggerThanZeroDouble());
             System.out.println("Triangle area = " +
                     countTriangleArea(getTriangleHight(), getTriangleBase())
                     + " square meters" + "\n");
 
-            System.out.println("Well done! Now let's calculate the rectangle area." + "\n" + "enter sideA lenght:");
+            System.out.println("Well done! Now let's calculate the rectangle area." + "\n" + "enter sideA length:");
             setRectSideA(inputBiggerThanZeroDouble());
             System.out.println("and sideB:");
             setRectSideB(inputBiggerThanZeroDouble());
@@ -58,3 +58,5 @@ class Mod04WithExeptions {
         System.out.println("That's all! Bye!");
     }
 }
+
+// didn't find any anti-pattern

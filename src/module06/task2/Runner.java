@@ -57,5 +57,7 @@ class Runner {
     }
 }
 
-// lines 27, 35, 43, 51, 52, 53
+// lines 27, 35, 43, 50, 51, 52
 //"magic numbers" - the names of instruments can be replaced with constants PIANO, GUITAR, TRUMPET
+
+//"boat anchor" - the exception NotEnoughInstruments will never throws because input values are checks by Input class methods
