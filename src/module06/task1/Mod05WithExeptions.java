@@ -8,8 +8,7 @@ import static module06.task1.userInput.UserInput.*;
 
 class Mod05WithExeptions {
     public static void main(String[] args) {
-
-        System.out.println("Now you can set array's lenght:");
+        System.out.println("Now you can set array's length:");
         try {
             int length = inputBiggerThanZeroInt();
             int[] intArr = new int[length];
@@ -29,3 +28,5 @@ class Mod05WithExeptions {
         }
     }
 }
+
+// didn't find any anti-pattern
