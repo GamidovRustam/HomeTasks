@@ -60,3 +60,4 @@ public class ShapesArea {
     }
 }
 
+//зачем этому классу нужны поля?

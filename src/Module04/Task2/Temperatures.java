@@ -29,3 +29,5 @@ public class Temperatures {
         Temperatures.fahrenheit = fahrenheit;
     }
 }
+
+//convertCtoF(), convertFtoC() - зачем мы сначала умножаем на 100 и потом сразу делим на 100?
