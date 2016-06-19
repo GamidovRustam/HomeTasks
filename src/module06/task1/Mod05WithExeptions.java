@@ -1,20 +1,18 @@
 package module06.task1;
 
-import module06.task1.chekInput.CheckInput;
-
 import java.util.Arrays;
 import java.util.InputMismatchException;
 
-import static module05.ArraysMethods.*;
+import static module05.MyArrays.*;
+import static module06.task1.userInput.UserInput.*;
 
-public class Mod05WithExeptions {
+class Mod05WithExeptions {
     public static void main(String[] args) {
-        CheckInput checkInput = new CheckInput();
 
         System.out.println("Now you can set array's lenght:");
         try {
-            int lenght = checkInput.ifBiggerThanZeroInt();
-            int[] intArr = new int[lenght];
+            int length = inputBiggerThanZeroInt();
+            int[] intArr = new int[length];
 
             System.out.println("Array is filled with a random values:\n" + Arrays.toString(setRandomValues(intArr)) + "\n");
 

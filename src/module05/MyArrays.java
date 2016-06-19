@@ -1,6 +1,6 @@
 package module05;
 
-public class ArraysMethods {
+public class MyArrays {
     public static int[] setRandomValues(int[] arr){
         for (int i = 0; i < arr.length; i++) {
             arr[i] = (int) (Math.random() * 100);
@@ -82,7 +82,7 @@ public class ArraysMethods {
 //setRandomValues() - какую функцию выполняет массив randomValues?
 
 //<<<<<<< Updated upstream
-//почему методы не статические? С какой целью ты создаешь обьект ArraysMethods?
+//почему методы не статические? С какой целью ты создаешь обьект MyArrays?
 //=======
 //Найди баг, который указан в классе Runner3//
 

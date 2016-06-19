@@ -1,27 +1,21 @@
-package Module04.Task1;
+package module04.task1;
 
-public class CounterOfShapesArea {
+public class ShapesArea {
     private static double triangleBase;
     private static double triangleHight;
     private static double rectSideA;
     private static double rectSideB;
     private static double radius;
 
-
     public static double countTriangleArea( double triangleBase, double triangleHight){
-        setTriangleBase(triangleBase);
-        setTriangleHight(triangleHight);
         return (triangleBase * triangleHight)*0.5;
     }
-    //зачем нам создавать обьект для вызова этих методов? Что если сделать их статическими?
-    public double countRectangleArea(double rectSideA, double rectSideB){
-        setRectSideA(rectSideA);
-        setRectSideB(rectSideB);
+
+    public static double countRectangleArea(double rectSideA, double rectSideB){
         return rectSideA * rectSideB;
     }
 
-    public double countCircleArea(double radius){
-        setRadius(radius);
+    public static double countCircleArea(double radius){
         return (Math.ceil(Math.PI * Math.pow(radius,2)*100))/100;
     }
 
@@ -30,7 +24,7 @@ public class CounterOfShapesArea {
     }
 
     public static void setTriangleBase(double triangleBase) {
-        CounterOfShapesArea.triangleBase = triangleBase;
+        ShapesArea.triangleBase = triangleBase;
     }
 
     public static double getTriangleHight() {
@@ -38,7 +32,7 @@ public class CounterOfShapesArea {
     }
 
     public static void setTriangleHight(double triangleHight) {
-        CounterOfShapesArea.triangleHight = triangleHight;
+        ShapesArea.triangleHight = triangleHight;
     }
 
     public static double getRectSideA() {
@@ -46,7 +40,7 @@ public class CounterOfShapesArea {
     }
 
     public static void setRectSideA(double rectSideA) {
-        CounterOfShapesArea.rectSideA = rectSideA;
+        ShapesArea.rectSideA = rectSideA;
     }
 
     public static double getRectSideB() {
@@ -54,7 +48,7 @@ public class CounterOfShapesArea {
     }
 
     public static void setRectSideB(double rectSideB) {
-        CounterOfShapesArea.rectSideB = rectSideB;
+        ShapesArea.rectSideB = rectSideB;
     }
 
     public static double getRadius() {
@@ -62,7 +56,7 @@ public class CounterOfShapesArea {
     }
 
     public static void setRadius(double radius) {
-        CounterOfShapesArea.radius = radius;
+        ShapesArea.radius = radius;
     }
 }
 

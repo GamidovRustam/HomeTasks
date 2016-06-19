@@ -6,7 +6,7 @@ Homeworks.iml
 *.iml
 
 # folder
-src/Other/*
+src/other/*
 .idea/*
 out/*
 

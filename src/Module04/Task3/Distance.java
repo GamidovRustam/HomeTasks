@@ -1,17 +1,13 @@
-package Module04.Task3;
+package module04.task3;
 
-public class DistanceCalculator {
+public class Distance {
     private static double pointAX;
     private static double pointAY;
     private static double pointBX;
     private static double pointBY;
 
 
-    public double countDistance(double pointAX, double pointAY, double pointBX, double pointBY) {
-        setPointAX(pointAX);
-        setPointAY(pointAY);
-        setPointBX(pointBX);
-        setPointBY(pointBY);
+    public static double countDistance(double pointAX, double pointAY, double pointBX, double pointBY) {
         return (Math.ceil(Math.sqrt((Math.pow(pointAX - pointBX, 2) + Math.pow(pointAY - pointBY, 2))) * 100)) / 100;
     }
 
@@ -20,7 +16,7 @@ public class DistanceCalculator {
     }
 
     public static void setPointAX(double pointAX) {
-        DistanceCalculator.pointAX = pointAX;
+        Distance.pointAX = pointAX;
     }
 
     public static double getPointAY() {
@@ -28,7 +24,7 @@ public class DistanceCalculator {
     }
 
     public static void setPointAY(double pointAY) {
-        DistanceCalculator.pointAY = pointAY;
+        Distance.pointAY = pointAY;
     }
 
     public static double getPointBX() {
@@ -36,7 +32,7 @@ public class DistanceCalculator {
     }
 
     public static void setPointBX(double pointBX) {
-        DistanceCalculator.pointBX = pointBX;
+        Distance.pointBX = pointBX;
     }
 
     public static double getPointBY() {
@@ -44,7 +40,7 @@ public class DistanceCalculator {
     }
 
     public static void setPointBY(double pointBY) {
-        DistanceCalculator.pointBY = pointBY;
+        Distance.pointBY = pointBY;
     }
 }
 

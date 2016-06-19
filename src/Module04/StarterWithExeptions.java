@@ -1,25 +1,17 @@
-package Module04;
+package module04;
 
-import Module04.Task1.CounterOfShapesArea;
-import Module04.Task2.TemperatureConverter;
-import Module04.Task3.DistanceCalculator;
-import module06.task1.chekInput.CheckInput;
-
-import java.util.InputMismatchException;
-import java.util.Scanner;
-
-public class StarterWithExeptions {
+class StarterWithExeptions {
     private static String error = "ERROR: Please,restart program and enter just numbers in format # or #,#:";
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        CounterOfShapesArea countArea = new CounterOfShapesArea();
-        CheckInput checkInput = new CheckInput();
+        /*Scanner sc = new Scanner(System.in);
+        ShapesArea countArea = new ShapesArea();
+        UserInput checkInput = new UserInput();
         System.out.println("Let's calculate some shapes area, and we begin with triangle." + "\n"
                             + "Enter the hight of triangle:");
 
         try {
-            double userInput = checkInput.ifBiggerThanZeroDouble();
+            double userInput = checkInput.inputBiggerThanZeroDouble();
             countArea.setTriangleHight(userInput);
             }catch(InputMismatchException ex){
                 System.out.println(error);
@@ -28,7 +20,7 @@ public class StarterWithExeptions {
             System.out.println("now enter the lenght of the base:");
 
         try {
-            double userInput = checkInput.ifBiggerThanZeroDouble();
+            double userInput = checkInput.inputBiggerThanZeroDouble();
             countArea.setTriangleBase(userInput);
             } catch (InputMismatchException ex){
             System.out.println(error);
@@ -42,7 +34,7 @@ public class StarterWithExeptions {
             System.out.println("Well done! Now let's calculate the rectangle area." + "\n" + "enter sideA lenght:");
 
         try {
-            double userInput = checkInput.ifBiggerThanZeroDouble();
+            double userInput = checkInput.inputBiggerThanZeroDouble();
             countArea.setRectSideA(userInput);
         } catch (InputMismatchException ex){
             System.out.println(error);
@@ -52,7 +44,7 @@ public class StarterWithExeptions {
             System.out.println("and sideB:");
 
         try {
-            double userInput = checkInput.ifBiggerThanZeroDouble();
+            double userInput = checkInput.inputBiggerThanZeroDouble();
             countArea.setRectSideB(userInput);
         } catch (InputMismatchException ex){
             System.out.println(error);
@@ -65,7 +57,7 @@ public class StarterWithExeptions {
             System.out.println("And the last shape is a circle:" + "\n" + "enter the radius of a circle:");
 
         try {
-            double userInput = checkInput.ifBiggerThanZeroDouble();
+            double userInput = checkInput.inputBiggerThanZeroDouble();
             countArea.setRadius(userInput);
         } catch (InputMismatchException ex){
             System.out.println(error);
@@ -75,7 +67,7 @@ public class StarterWithExeptions {
             System.out.println("Circle area = " + countArea.countCircleArea(countArea.getRadius())
                                 + " square meters" + "\n");
 
-            TemperatureConverter temperature = new TemperatureConverter();
+            Temperatures temperature = new Temperatures();
             System.out.println("Now, you can convert the temperature grades." + "\n" + "enter the Celsius grades:");
 
         try {
@@ -98,12 +90,12 @@ public class StarterWithExeptions {
         }
             System.out.println("in Celsius it will be " + temperature.convertFtoC(temperature.getFahrenheit()) + "\n");
 
-            DistanceCalculator distance = new DistanceCalculator();
+            Distance distance = new Distance();
             System.out.println("Ok! Now you can calculate the distance between 2 points" + "\n"
                                 + "Enter point A coordinate X");
 
         try {
-            double userInput = checkInput.ifBiggerThanZeroDouble();
+            double userInput = checkInput.inputBiggerThanZeroDouble();
             distance.setPointAX(userInput);
         } catch (InputMismatchException ex){
             System.out.println(error);
@@ -113,7 +105,7 @@ public class StarterWithExeptions {
         System.out.println("Enter point A coordinate Y");
 
         try {
-            double userInput = checkInput.ifBiggerThanZeroDouble();
+            double userInput = checkInput.inputBiggerThanZeroDouble();
             distance.setPointAY(userInput);
         } catch (InputMismatchException ex){
             System.out.println(error);
@@ -123,7 +115,7 @@ public class StarterWithExeptions {
         System.out.println("Enter point B coordinate X");
 
         try {
-            double userInput = checkInput.ifBiggerThanZeroDouble();
+            double userInput = checkInput.inputBiggerThanZeroDouble();
             distance.setPointBX(userInput);
         } catch (InputMismatchException ex){
             System.out.println(error);
@@ -133,7 +125,7 @@ public class StarterWithExeptions {
         System.out.println("Enter point B coordinate Y");
 
         try {
-            double userInput = checkInput.ifBiggerThanZeroDouble();
+            double userInput = checkInput.inputBiggerThanZeroDouble();
             distance.setPointBY(userInput);
         } catch (InputMismatchException ex){
             System.out.println(error);
@@ -146,6 +138,6 @@ public class StarterWithExeptions {
                     distance.getPointBX(),
                     distance.getPointBY()) + " meters.");
 
-            System.out.println("That's all! Bye!");
+        */    System.out.println("That's all! Bye!");
     }
 }

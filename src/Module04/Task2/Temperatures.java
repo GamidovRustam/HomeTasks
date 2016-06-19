@@ -1,17 +1,15 @@
-package Module04.Task2;
+package module04.task2;
 
-public class TemperatureConverter {
+public class Temperatures {
     private static double celsius;
     private static double fahrenheit;
 
 
-    public double convertCtoF(double celsius){
-        setCelsius(celsius);
+    public static double convertCtoF(double celsius){
         return (Math.ceil((celsius*(9.0/5.0)+32)*100)/100);
     }
-    //тут тоже есть смысл подумать о статических методах
-    public double convertFtoC(double fahrenheit){
-        setFahrenheit(fahrenheit);
+
+    public static double convertFtoC(double fahrenheit){
         return Math.ceil(((fahrenheit-32)*(5.0/9.0))*100)/100;
     }
 
@@ -20,7 +18,7 @@ public class TemperatureConverter {
     }
 
     public static void setCelsius(double celsius) {
-        TemperatureConverter.celsius = celsius;
+        Temperatures.celsius = celsius;
     }
 
     public static double getFahrenheit() {
@@ -28,6 +26,6 @@ public class TemperatureConverter {
     }
 
     public static void setFahrenheit(double fahrenheit) {
-        TemperatureConverter.fahrenheit = fahrenheit;
+        Temperatures.fahrenheit = fahrenheit;
     }
 }

@@ -2,9 +2,9 @@ package module05;
 
 import java.util.Arrays;
 
-import static module05.ArraysMethods.*;
+import static module05.MyArrays.*;
 
-public class Runner {
+class Runner {
     public static void main(String[] args){
         int lenght = 10;
         int[] intArr = new int[lenght];
