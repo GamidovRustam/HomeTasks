@@ -6,4 +6,3 @@ public class Distances {
         return (Math.ceil(Math.sqrt((Math.pow(pointAX - pointBX, 2) + Math.pow(pointAY - pointBY, 2))) * 100)) / 100;
     }
 }
-

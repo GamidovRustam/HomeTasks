@@ -64,4 +64,5 @@ class Mod04WithExсeptions {
         System.out.println("That's all! Bye!");
     }
 }
+
 // didn't find any anti-pattern

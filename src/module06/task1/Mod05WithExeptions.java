@@ -28,5 +28,4 @@ class Mod05WithExeptions {
         }
     }
 }
-
 // didn't find any anti-pattern

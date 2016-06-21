@@ -96,7 +96,6 @@ public class UserInput {
 }
 
 
-
 // lines 29, 45, 61, 77, 96, 113 - "magic numbers"
 // How to avoid them:
 //      1) uncomment lines 6-20, 30, 46, 62, 78, 97, 114
