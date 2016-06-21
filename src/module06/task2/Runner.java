@@ -56,7 +56,6 @@ class Runner {
         }
     }
 }
-
 // lines 27, 35, 43, 50, 51, 52
 //"magic numbers" - the names of instruments can be replaced with constants PIANO, GUITAR, TRUMPET
 
