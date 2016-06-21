@@ -3,127 +3,94 @@ package module06.task1.userInput;
 import java.util.Scanner;
 
 public class UserInput {
-//    private static String enterPositiveNumber = "Wrong! Please, enter the number bigger than zero:";
-//    private static String enterDoubleOrNumber = "Wrong! Please, enter the number # or #,#:";
-//    private static String enterNumber =  "Wrong! Please, enter the number:";
-//
-//    public static String getEnterPositiveNumber() {
-//        return enterPositiveNumber;
-//    }
-//
-//    public static String getEnterDoubleOrNumber() {
-//        return enterDoubleOrNumber;
-//    }
-//
-//    public static String getEnterNumber() {
-//        return enterNumber;
-//    }
+    private static final String ENTER_POSITIVE_NUMBER = "Wrong! Please, enter the number bigger than zero:";
+    private static final String ENTER_DOUBLE_OR_NUMBER = "Wrong! Please, enter the number (# or #,#), that bigger than zero:";
+    private static final String ENTER_NUMBER =  "Wrong! Please, enter the number:";
+    private static Scanner sc = new Scanner(System.in);
 
-    public static double inputBiggerThanZeroDouble() {
-        double userInput = 0;
-        boolean lessThanZero = true;
+    public static double inputPositiveDouble() {
+        double userInput;
 
-        while (lessThanZero) {
+        while (true) {
             userInput = inputDouble();
             if (userInput <= 0) {
-                System.out.println("Wrong! Please, enter the number bigger than zero:");
-                //System.out.println(getEnterPositiveNumber());
+                System.out.println(ENTER_DOUBLE_OR_NUMBER);
             } else {
-                lessThanZero = false;
+                break;
             }
         }
         return userInput;
     }
 
-    public static int inputBiggerThanZeroInt() {
-        int userInput = 0;
-        boolean lessThanZero = true;
+    public static int inputPositiveInt() {
+        int userInput;
 
-        while (lessThanZero) {
+        while (true) {
             userInput = inputInt();
             if (userInput <= 0) {
-                System.out.println("Wrong! Please, enter the number bigger than zero:");
-                //System.out.println(getEnterPositiveNumber());
+                System.out.println(ENTER_POSITIVE_NUMBER);
             } else {
-                lessThanZero = false;
+                break;
             }
         }
         return userInput;
     }
 
     public static double inputPositiveOrZeroDouble() {
-        double userInput = 0;
-        boolean lessThanZero = true;
+        double userInput;
 
-        while (lessThanZero) {
+        while (true) {
             userInput = inputDouble();
             if (userInput < 0) {
-                System.out.println("Wrong! Please, enter the number bigger than zero:");
-                //System.out.println(getEnterPositiveNumber());
+                System.out.println(ENTER_POSITIVE_NUMBER);
             } else {
-                lessThanZero = false;
+                break;
             }
         }
         return userInput;
     }
 
     public static int inputPositiveOrZeroInt() {
-        int userInput = 0;
-        boolean lessThanZero = true;
+        int userInput;
 
-        while (lessThanZero) {
+        while (true) {
             userInput = inputInt();
             if (userInput < 0) {
-                System.out.println("Wrong! Please, enter the number bigger than zero:");
-                //System.out.println(getEnterPositiveNumber());
+                System.out.println(ENTER_POSITIVE_NUMBER);
             } else {
-                lessThanZero = false;
+                break;
             }
         }
         return userInput;
     }
 
     public static double inputDouble() {
-        boolean ifNumber = false;
-        double userInput = 0;
+        double userInput;
 
-        while (!(ifNumber)) {
-            Scanner sc = new Scanner(System.in);
+        while (true) {
             if (sc.hasNextDouble()) {
                 userInput = sc.nextDouble();
-                ifNumber = true;
+                break;
             } else {
-                System.out.println("Wrong! Please, enter the number:");
-//              System.out.println(getEnterNumber());
+              System.out.println(ENTER_NUMBER);
+                sc.next();
             }
         }
         return userInput;
     }
 
     public static int inputInt(){
-        boolean ifNumber = false;
-        int userInput = 0;
+        int userInput;
 
-        while (!(ifNumber)) {
-            Scanner sc = new Scanner(System.in);
+        while (true) {
             if (sc.hasNextInt()) {
                 userInput = sc.nextInt();
-                ifNumber = true;
+                break;
             } else {
-                    System.out.println("Wrong! Please, enter the number:");
-//                //System.out.println(getEnterNumber());
+                System.out.println(ENTER_NUMBER);
+                sc.next();
             }
         }
         return userInput;
     }
 }
-
-
-
-// lines 29, 45, 61, 77, 96, 113 - "magic numbers"
-// How to avoid them:
-//      1) uncomment lines 6-20, 30, 46, 62, 78, 97, 114
-//      2) delete lines 29, 45, 61, 77, 96, 113
-
-
-

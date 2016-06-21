@@ -8,7 +8,7 @@ import static module06.task1.userInput.UserInput.*;
 class RunnerWithExeption {
     public static void main(String[] args){
         System.out.println("Now you can set array's lenght:");
-        int length = inputBiggerThanZeroInt();
+        int length = inputPositiveInt();
         int[] intArr = new int[length];
 
         System.out.println("Array is filled with a random values:\n" + Arrays.toString(setRandomValues(intArr)) + "\n");

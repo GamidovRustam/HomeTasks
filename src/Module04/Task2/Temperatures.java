@@ -1,31 +1,12 @@
 package module04.task2;
 
 public class Temperatures {
-    private static double celsius;
-    private static double fahrenheit;
-
-
     public static double convertCtoF(double celsius){
-        return (Math.ceil((celsius*(9.0/5.0)+32)*100)/100);
+    //for round return statement to have 2 digits after a point: it's multiplied on 100, rounds and then divided on 100
+        return (Math.ceil((celsius*(9.0/5.0)+32)*100))/100;
     }
 
     public static double convertFtoC(double fahrenheit){
-        return Math.ceil(((fahrenheit-32)*(5.0/9.0))*100)/100;
-    }
-
-    public static double getCelsius() {
-        return celsius;
-    }
-
-    public static void setCelsius(double celsius) {
-        Temperatures.celsius = celsius;
-    }
-
-    public static double getFahrenheit() {
-        return fahrenheit;
-    }
-
-    public static void setFahrenheit(double fahrenheit) {
-        Temperatures.fahrenheit = fahrenheit;
+        return (Math.ceil(((fahrenheit-32)*(5.0/9.0))*100))/100;
     }
 }

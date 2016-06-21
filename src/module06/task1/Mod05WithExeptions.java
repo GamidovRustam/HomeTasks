@@ -10,7 +10,7 @@ class Mod05WithExeptions {
     public static void main(String[] args) {
         System.out.println("Now you can set array's length:");
         try {
-            int length = inputBiggerThanZeroInt();
+            int length = inputPositiveInt();
             int[] intArr = new int[length];
 
             System.out.println("Array is filled with a random values:\n" + Arrays.toString(setRandomValues(intArr)) + "\n");
