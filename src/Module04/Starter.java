@@ -7,7 +7,7 @@ class Starter {
 //        String error = "not correct! Please,restart program and enter the number in format # or #,#:";
 //
 //        Scanner sc = new Scanner(System.in);
-//        ShapesArea countArea = new ShapesArea();
+//        Shapes countArea = new Shapes();
 //        System.out.println("Let's calculate some shapes area, and we begin with triangle.");
 //        System.out.println("Enter the hight of triangle:");
 //

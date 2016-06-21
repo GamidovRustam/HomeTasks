@@ -5,13 +5,13 @@ class StarterWithExeptions {
 
     public static void main(String[] args) {
         /*Scanner sc = new Scanner(System.in);
-        ShapesArea countArea = new ShapesArea();
+        Shapes countArea = new Shapes();
         UserInput checkInput = new UserInput();
         System.out.println("Let's calculate some shapes area, and we begin with triangle." + "\n"
                             + "Enter the hight of triangle:");
 
         try {
-            double userInput = checkInput.inputBiggerThanZeroDouble();
+            double userInput = checkInput.inputPositiveDouble();
             countArea.setTriangleHight(userInput);
             }catch(InputMismatchException ex){
                 System.out.println(error);
@@ -20,7 +20,7 @@ class StarterWithExeptions {
             System.out.println("now enter the lenght of the base:");
 
         try {
-            double userInput = checkInput.inputBiggerThanZeroDouble();
+            double userInput = checkInput.inputPositiveDouble();
             countArea.setTriangleBase(userInput);
             } catch (InputMismatchException ex){
             System.out.println(error);
@@ -34,7 +34,7 @@ class StarterWithExeptions {
             System.out.println("Well done! Now let's calculate the rectangle area." + "\n" + "enter sideA lenght:");
 
         try {
-            double userInput = checkInput.inputBiggerThanZeroDouble();
+            double userInput = checkInput.inputPositiveDouble();
             countArea.setRectSideA(userInput);
         } catch (InputMismatchException ex){
             System.out.println(error);
@@ -44,7 +44,7 @@ class StarterWithExeptions {
             System.out.println("and sideB:");
 
         try {
-            double userInput = checkInput.inputBiggerThanZeroDouble();
+            double userInput = checkInput.inputPositiveDouble();
             countArea.setRectSideB(userInput);
         } catch (InputMismatchException ex){
             System.out.println(error);
@@ -57,7 +57,7 @@ class StarterWithExeptions {
             System.out.println("And the last shape is a circle:" + "\n" + "enter the radius of a circle:");
 
         try {
-            double userInput = checkInput.inputBiggerThanZeroDouble();
+            double userInput = checkInput.inputPositiveDouble();
             countArea.setRadius(userInput);
         } catch (InputMismatchException ex){
             System.out.println(error);
@@ -95,7 +95,7 @@ class StarterWithExeptions {
                                 + "Enter point A coordinate X");
 
         try {
-            double userInput = checkInput.inputBiggerThanZeroDouble();
+            double userInput = checkInput.inputPositiveDouble();
             distance.setPointAX(userInput);
         } catch (InputMismatchException ex){
             System.out.println(error);
@@ -105,7 +105,7 @@ class StarterWithExeptions {
         System.out.println("Enter point A coordinate Y");
 
         try {
-            double userInput = checkInput.inputBiggerThanZeroDouble();
+            double userInput = checkInput.inputPositiveDouble();
             distance.setPointAY(userInput);
         } catch (InputMismatchException ex){
             System.out.println(error);
@@ -115,7 +115,7 @@ class StarterWithExeptions {
         System.out.println("Enter point B coordinate X");
 
         try {
-            double userInput = checkInput.inputBiggerThanZeroDouble();
+            double userInput = checkInput.inputPositiveDouble();
             distance.setPointBX(userInput);
         } catch (InputMismatchException ex){
             System.out.println(error);
@@ -125,7 +125,7 @@ class StarterWithExeptions {
         System.out.println("Enter point B coordinate Y");
 
         try {
-            double userInput = checkInput.inputBiggerThanZeroDouble();
+            double userInput = checkInput.inputPositiveDouble();
             distance.setPointBY(userInput);
         } catch (InputMismatchException ex){
             System.out.println(error);

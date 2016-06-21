@@ -94,3 +94,14 @@ public class UserInput {
         return userInput;
     }
 }
+
+
+
+// lines 29, 45, 61, 77, 96, 113 - "magic numbers"
+// How to avoid them:
+//      1) uncomment lines 6-20, 30, 46, 62, 78, 97, 114
+//      2) delete lines 29, 45, 61, 77, 96, 113
+
+//inputPositiveOrZeroInt - похоже, что мы вводим какое-то число и сохраняем его куда-то (в поле, например), но ничего не возвращаем
+
+//inputInt(), inputDouble() - ты создаешь неогранниченное количество обьектов Сканнер. Вынеси эту строку из цикла

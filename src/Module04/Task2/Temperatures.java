@@ -10,3 +10,5 @@ public class Temperatures {
         return (Math.ceil(((fahrenheit-32)*(5.0/9.0))*100))/100;
     }
 }
+
+//convertCtoF(), convertFtoC() - зачем мы сначала умножаем на 100 и потом сразу делим на 100?
