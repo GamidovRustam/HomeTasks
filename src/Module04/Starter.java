@@ -56,7 +56,6 @@ class Starter {
 //                                    System.out.println("in Celsius it will be " + temperature.convertFtoC(temperature.getFahrenheit()));
 //                                    System.out.println("");
 //
-//
 //                                    Distance distance = new Distance();
 //                                    System.out.println("Ok! Now you can calculate the distance between 2 points");
 //                                    System.out.println("Enter point A coordinate X");
