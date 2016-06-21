@@ -8,7 +8,7 @@ Solved homeworks for Go Java Course
     Загрузи файл с расширением .java в свой репозиторий на GitHub. Ссылку на выполненное ДЗ с репозитория выложи тут в LMS системе. Как пользоваться GitHub можешь посмотреть в видео в Модуле 0.
 
     Comments:
-      "Module1.java" - was written in notepad++ 
+      "module01.java" - was written in notepad++
       "Module1Solution.java"  - was written by using Intelij IDEA
       
       

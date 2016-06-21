@@ -1,8 +1,4 @@
-package Module03.Task3;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+package module03.Task3;
 
 
 class MusicShop {

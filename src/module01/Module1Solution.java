@@ -1,4 +1,4 @@
-package Module1;
+package module01;
 
 /**
  * Created by Rustam Gamidov on 19.05.2016.

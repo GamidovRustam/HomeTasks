@@ -1,9 +1,4 @@
-package Module03.Task3;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+package module03.Task3;
 
 public class Runner3 {
 //    public static void main(String[] args) {

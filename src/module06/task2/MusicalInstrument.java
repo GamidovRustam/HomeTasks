@@ -5,3 +5,4 @@ class MusicalInstrument {
     public final static String PIANO = "piano";
     public final static String TRUMPET = "trumpet";
 }
+

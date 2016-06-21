@@ -6,7 +6,7 @@ import java.util.Map;
 import static module06.task1.userInput.UserInput.*;
 
 class Runner {
-    public static void main(String[] args) throws Module03.Task3.NotEnoughInstruments {
+    public static void main(String[] args) throws module03.Task3.NotEnoughInstruments {
         String there = "There is just ";
         String orderAgain = "left in shop. Please order again:";
 
@@ -56,6 +56,8 @@ class Runner {
         }
     }
 }
+
+
 // lines 27, 35, 43, 50, 51, 52
 //"magic numbers" - the names of instruments can be replaced with constants PIANO, GUITAR, TRUMPET
 

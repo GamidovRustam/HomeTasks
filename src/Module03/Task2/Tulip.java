@@ -1,4 +1,4 @@
-package Module03.Task2;
+package module03.Task2;
 
 
 class Tulip extends Flower{
