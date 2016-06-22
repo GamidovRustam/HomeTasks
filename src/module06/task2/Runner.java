@@ -60,3 +60,9 @@ class Runner {
 //"magic numbers" - the names of instruments can be replaced with constants PIANO, GUITAR, TRUMPET
 
 //"boat anchor" - the exception NotEnoughInstruments will never throws because input values are checks by Input class methods
+
+//хорошо было бы в выводе, перед тем как спрашивать сколько гитар вы хотите купить, сообщить о том, сколько их вообще есть)
+
+//there, orderAgain - it should be constants
+
+//много повторяющихся частей кода. Нужно рефакторить - выносить в методы, использовать Enum...
