@@ -7,8 +7,11 @@ import static module06.task1.userInput.UserInput.*;
 
 class Runner {
     public static void main(String[] args) throws module03.Task3.NotEnoughInstruments {
-        String there = "There is just ";
-        String orderAgain = "left in shop. Please order again:";
+        final String THERE_JUST = "There is just ";
+        final String ORDER_AGAIN = " left in shop. Please order again:";
+        final String THERE = "There is ";
+        final String HOW_MANY = " in shop. How many you want to order:";
+
 
         MusicShop shop = new MusicShop();
 //  setting starter assortment in shop
@@ -21,26 +24,26 @@ class Runner {
 
         try {
             Map<String, Integer> order = new HashMap<>();
-        System.out.println("How many piano you want to order:");
+        System.out.println(THERE + assortment.get(MusicalInstrument.PIANO) + " piano" + HOW_MANY);
         int orderPiano = inputPositiveOrZeroInt();
         while (orderPiano > assortment.get(MusicalInstrument.PIANO)) {
-            System.out.println(there + assortment.get(MusicalInstrument.PIANO) + " piano " + orderAgain);
+            System.out.println(THERE_JUST + assortment.get(MusicalInstrument.PIANO) + " piano" + ORDER_AGAIN);
             orderPiano = inputPositiveOrZeroInt();
         }
         order.put(MusicalInstrument.PIANO, orderPiano);
 
-        System.out.println("now, order guitars:");
+        System.out.println(THERE + assortment.get(MusicalInstrument.GUITAR) + " guitars" + HOW_MANY);
         int orderGuitar = inputPositiveOrZeroInt();
         while (orderGuitar > assortment.get(MusicalInstrument.GUITAR)) {
-            System.out.println(there + assortment.get(MusicalInstrument.GUITAR) + " guitar " + orderAgain);
+            System.out.println(THERE_JUST + assortment.get(MusicalInstrument.GUITAR) + " guitars" + ORDER_AGAIN);
             orderGuitar = inputPositiveOrZeroInt();
         }
         order.put(MusicalInstrument.GUITAR, orderGuitar);
 
-        System.out.println("and the trumpets:");
+        System.out.println(THERE + assortment.get(MusicalInstrument.TRUMPET) + " trumpet" + HOW_MANY);
         int orderTrumpet = inputPositiveOrZeroInt();
         while (orderTrumpet > assortment.get(MusicalInstrument.TRUMPET)) {
-            System.out.println(there + assortment.get(MusicalInstrument.TRUMPET) + " trumpet " + orderAgain);
+            System.out.println(THERE_JUST + assortment.get(MusicalInstrument.TRUMPET) + " trumpet" + ORDER_AGAIN);
             orderTrumpet = inputPositiveOrZeroInt();
         }
         order.put(MusicalInstrument.TRUMPET, orderTrumpet);
@@ -58,13 +61,13 @@ class Runner {
 }
 
 
-// lines 27, 35, 43, 50, 51, 52
-//"magic numbers" - the names of instruments can be replaced with constants PIANO, GUITAR, TRUMPET
+// lines 27, 35, 43, 50, 51, 52//
+//"magic numbers" - the names of instruments can be replaced with constants PIANO, GUITAR, TRUMPET//
 
-//"boat anchor" - the exception NotEnoughInstruments will never throws because input values are checks by Input class methods
+//"boat anchor" - the exception NotEnoughInstruments will never throws because input values are checks by Input class methods//
 
-//хорошо было бы в выводе, перед тем как спрашивать сколько гитар вы хотите купить, сообщить о том, сколько их вообще есть)
+//хорошо было бы в выводе, перед тем как спрашивать сколько гитар вы хотите купить, сообщить о том, сколько их вообще есть)//
 
-//there, orderAgain - it should be constants
+//there, orderAgain - it should be constants//
 
 //много повторяющихся частей кода. Нужно рефакторить - выносить в методы, использовать Enum...

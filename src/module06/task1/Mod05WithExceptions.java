@@ -6,7 +6,7 @@ import java.util.InputMismatchException;
 import static module05.MyArrays.*;
 import static module06.task1.userInput.UserInput.*;
 
-class Mod05WithExeptions {
+class Mod05WithExceptions {
     public static void main(String[] args) {
         System.out.println("Now you can set array's length:");
         try {
