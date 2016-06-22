@@ -93,6 +93,7 @@ public class UserInput {
         }
         return userInput;
     }
+
 }
 
 //ENTER_DOUBLE_OR_NUMBER - смешно)) isNumber(double)? Может ENTER_DOUBLE_OR_INTEGER?

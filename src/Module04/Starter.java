@@ -2,8 +2,15 @@ package module04;
 //по возможности не используй импорт со *. Указывай какой класс импортируешь
 //введи дробное число или символ - найди баг
 
+import module04.task1.Shapes;
+import module04.task3.Distances;
+
 class Starter {
     public static void main(String[] args) {
+        System.out.printf(String.format("%.2f", Shapes.countTriangleArea(5.54545, 22.3336)));
+        System.out.println(String.format("%.2f",Shapes.countRectangleArea(5, 10)));
+        System.out.println(String.format("%.2f",Shapes.countCircleArea(5)));
+        System.out.println(String.format("%.2f",Distances.countDistance(2, 2, 3, 4)));
 //        String error = "not correct! Please,restart program and enter the number in format # or #,#:";
 //
 //        Scanner sc = new Scanner(System.in);
