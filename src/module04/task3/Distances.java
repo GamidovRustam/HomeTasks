@@ -1,9 +1,14 @@
 package module04.task3;
 
+import java.util.InputMismatchException;
+
 public class Distances {
     public static double countDistance(double pointAX, double pointAY, double pointBX, double pointBY) {
+        if (pointAX < 0 || pointAY < 0 || pointBX < 0 || pointBY < 0) {
+            throw new InputMismatchException("Wrong parameters! The point coordinate must be bigger than zero!");
+        }
     //for round return statement to have 2 digits after a point: it's multiplied on 100, rounds and then divided on 100
-        return (Math.ceil(Math.sqrt((Math.pow(pointAX - pointBX, 2) + Math.pow(pointAY - pointBY, 2))) * 100)) / 100;
+        return Math.sqrt((Math.pow(pointAX - pointBX, 2) + Math.pow(pointAY - pointBY, 2)));
     }
 }
 
