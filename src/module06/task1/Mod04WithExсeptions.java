@@ -67,3 +67,5 @@ class Mod04WithExсeptions {
 }
 
 // didn't find any anti-pattern
+//triangleHight - mistake
+
