@@ -1,55 +1,84 @@
 package module06.task2;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-class MusicShop {
-    private Map<String, Integer> musicalInstruments;
+import static module06.task1.userInput.UserInput.inputPositiveOrZeroInt;
 
-    public Map<String, Integer> getMusicalInstruments() {
-        return musicalInstruments;
+public class MusicShop {
+    private static Map<MusicalInstruments, Integer> assortment;
+
+    public Map<MusicalInstruments, Integer> getAssortment() {
+        return assortment;
     }
 
-    public void setMusicalInstruments(Map<String, Integer> musicalInstruments) {
-        this.musicalInstruments = musicalInstruments;
+    public void setAssortment() {
+        this.assortment = new HashMap<>();
+        System.out.println("[Administrator part]");
+        for (MusicalInstruments m : MusicalInstruments.values()) {
+            System.out.println("Set the quantity of " + m.toString() + ":");
+            assortment.put(m, inputPositiveOrZeroInt());
+        }
     }
 
-    public List<MusicalInstrument> prepareInstruments(Map<String, Integer> order) throws NotEnoughInstruments {
-        int orderPiano = order.get(MusicalInstrument.PIANO);
-        int pianoInShop = musicalInstruments.get(MusicalInstrument.PIANO);
-        if (orderPiano > pianoInShop) {
-            throw new NotEnoughInstruments("not enough piano");
+    public Map makeOrder() {
+        final String THERE = "There is ";
+        final String HOW_MANY = " in shop. How many you want to order:";
+        final String THERE_JUST = "There is just ";
+        final String ORDER_AGAIN = " left in shop. Please make order again:";
+
+        Map<MusicalInstruments, Integer> order = new HashMap<>();
+        System.out.println("[Customer part]");
+        for (MusicalInstruments m : MusicalInstruments.values()) {
+            System.out.println(THERE + assortment.get(m) + " " + m.toString() + HOW_MANY);
+            int orderInstr = inputPositiveOrZeroInt();
+            while (orderInstr > assortment.get(m)) {
+                System.out.println(THERE_JUST + assortment.get(m) + " " + m.toString() + ORDER_AGAIN);
+                orderInstr = inputPositiveOrZeroInt();
+            }
+            order.put(m, orderInstr);
         }
+        return order;
+    }
 
-        int orderGuitar = order.get(MusicalInstrument.GUITAR);
-        int guitarInShop = musicalInstruments.get(MusicalInstrument.GUITAR);
-        if (orderGuitar > guitarInShop) {
-            throw new NotEnoughInstruments("not enough guitars");
-        }
-
-        int orderTrumpet = order.get(MusicalInstrument.TRUMPET);
-        int trumpetInShop = musicalInstruments.get(MusicalInstrument.TRUMPET);
-        if (orderTrumpet > trumpetInShop) {
-            throw new NotEnoughInstruments("not enough trumpets");
-        }
-
-        musicalInstruments.put(MusicalInstrument.PIANO, pianoInShop - orderPiano);
-        musicalInstruments.put(MusicalInstrument.GUITAR, guitarInShop - orderGuitar);
-        musicalInstruments.put(MusicalInstrument.TRUMPET, trumpetInShop - orderTrumpet);
-
+    public List<MusicalInstrument> prepareInstruments(Map<MusicalInstruments, Integer> order) throws NotEnoughInstruments {
         List<MusicalInstrument> result = new ArrayList<>();
-        for (int i = 0; i < orderPiano; i++) {
-            result.add(new Piano());
+
+        for (MusicalInstruments m : MusicalInstruments.values()) {
+            int orderInstrument = order.get(m);
+            int instrumentInShop = assortment.get(m);
+
+            if (orderInstrument <= instrumentInShop) {
+                assortment.put(m, instrumentInShop - orderInstrument);
+            } else {
+                throw new NotEnoughInstruments("not enough " + m.toString());
+            }
+            for (MusicalInstruments n : MusicalInstruments.values()) {
+                for (int i = 0; i < orderInstrument; i++) {
+                    switch (n) {
+                        case PIANO:
+                            result.add(new Piano());
+                            break;
+                        case GUITAR:
+                            result.add(new Guitar());
+                            break;
+                        case TRUMPET:
+                            result.add(new Trumpet());
+                            break;
+                        default:
+                            System.out.println("Can't find required type of instrument");
+                            break;
+                    }
+                }
+            }
         }
-        for (int i = 0; i < orderGuitar; i++) {
-            result.add(new Guitar());
-        }
-        for (int i = 0; i < orderTrumpet; i++) {
-            result.add(new Trumpet());
+        System.out.println("\n" + "Your order: ");
+        for (MusicalInstruments m : MusicalInstruments.values()) {
+            System.out.println(m.toString() + " - " + order.get(m));
         }
         return result;
     }
 }
-
 
