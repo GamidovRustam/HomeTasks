@@ -1,4 +1,4 @@
-package module03.Task3;
+package module03.task3;
 
 
 class Piano extends MusicalInstrument {

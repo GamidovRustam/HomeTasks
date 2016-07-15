@@ -11,3 +11,7 @@ src/other/*
 out/*
 
 
+.idea/
+out/
+src/module09/
+src/other/

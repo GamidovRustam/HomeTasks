@@ -1,7 +1,7 @@
-package module03.Task2;
+package module03.task2;
 
 import java.util.List;
 
-class Rosebush {
+public class Rosebush {
     private List<Rose> roses;
 }

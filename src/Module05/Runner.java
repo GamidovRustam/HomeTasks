@@ -18,7 +18,7 @@ class Runner {
 
         System.out.println("Array is sorted by using \"Bubble\" algorithm:\n" +
                             Arrays.toString(sortBubble(intArr.clone())) + "\n");
-//        System.out.println("Now we are going to sort next array:\n" + Arrays.toString(intArr) + "\n");
+//        System.out.println("Now we are going to sortByColor next array:\n" + Arrays.toString(intArr) + "\n");
         System.out.println("Array is sorted by using \"Selection\" algorithm:" + "\n" +
                             Arrays.toString(sortSelection(intArr.clone())));
     }
@@ -27,7 +27,7 @@ class Runner {
 
 //Создать второй массив и передавать его во второй метод сортировки - это не решение бага.
 //Ты хочешь передать новый отсортированный массив и оставить оригинальный неизменным. Но оригинальный тоже меняется.
-//Нужно или придумать как оставить его неизменным или менять его осмысленно, как в методе Arrays.sort - ты передаешь
+//Нужно или придумать как оставить его неизменным или менять его осмысленно, как в методе Arrays.sortByColor - ты передаешь
 //ему свой массив и он его сортирует, а не передает другой отсортированный. Так тоже можно, но нужно чуть подправить
 //код, не создавать лишние два массива
 

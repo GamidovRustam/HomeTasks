@@ -1,4 +1,4 @@
-package module03.Task3;
+package module03.task3;
 
 
 class MusicShop {
@@ -12,8 +12,8 @@ class MusicShop {
 //        this.musicalInstruments = musicalInstruments;
 //    }
 //
-//    public Map<String, Integer> prepareInstruments(Map<String, Integer> order) throws NotEnoughInstruments{
-//        int cntPiano = order.get(MusicalInstrument.PIANO);
+//    public Map<String, Integer> prepareInstruments(Map<String, Integer> makeOrder) throws NotEnoughInstruments{
+//        int cntPiano = makeOrder.get(MusicalInstrument.PIANO);
 //        int cntPianoInShop = musicalInstruments.get(MusicalInstrument.PIANO);
 //        if (cntPiano > cntPianoInShop){
 //            throw new NotEnoughInstruments("Not enough");
@@ -28,5 +28,5 @@ class MusicShop {
     }
 
     //    MusicalInstrument m =
-//    public List<Instrument> prepareInstruments(Map<String, Integer> order){...}
+//    public List<Instrument> prepareInstruments(Map<String, Integer> makeOrder){...}
 //}

@@ -3,7 +3,7 @@ package module06.task2;
 import java.util.Map;
 
 class Runner {
-    public static void main(String[] args) throws module03.Task3.NotEnoughInstruments {
+    public static void main(String[] args) throws module03.task3.NotEnoughInstruments {
         MusicShop shop = new MusicShop();
         shop.setAssortment();
         try {

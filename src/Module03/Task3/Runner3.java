@@ -1,4 +1,4 @@
-package module03.Task3;
+package module03.task3;
 
 public class Runner3 {
 //    public static void main(String[] args) {
@@ -10,8 +10,8 @@ public class Runner3 {
 //
 //        store.setMusicalInstruments(instruments);
 //
-//        Map<String, Integer> order = new HashMap<>();
-//        order.put(MusicalInstrument.PIANO, 7);
+//        Map<String, Integer> makeOrder = new HashMap<>();
+//        makeOrder.put(MusicalInstrument.PIANO, 7);
 //
 //        List<MusicalInstrument> list;
 //        for (MusicalInstrument instrument: list){
