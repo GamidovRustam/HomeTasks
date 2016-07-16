@@ -1,8 +1,7 @@
 package module03.task2;
 
 
-import other.module08.flowerCollections.MyColors;
-import other.module08.flowerCollections.MyFlowers;
+import module08.flowerUtils.MyColors;
 
 public abstract class Flower {
     private MyFlowers name;

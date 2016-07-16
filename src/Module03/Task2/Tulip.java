@@ -1,8 +1,6 @@
 package module03.task2;
 
-
-import other.module08.flowerCollections.MyColors;
-import other.module08.flowerCollections.MyFlowers;
+import module08.flowerUtils.MyColors;
 
 public class Tulip extends Flower {
     public Tulip(MyFlowers name, MyColors color, int price) {
