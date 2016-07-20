@@ -2,6 +2,7 @@ package module09;
 
 import module06.task1.userInput.UserInput;
 import module08.flower.*;
+import module08.flowerUtils.FlowerCollections;
 import module08.flowerUtils.MyColors;
 import module09.crypter.CaesarCrypter;
 
@@ -18,25 +19,21 @@ public class Runner {
         flowers.add(new Chamomile(MyColors.YELLOW, 9));
         flowers.add(new Rose(MyColors.BLUE, 19));
 
-        String[] flowersToString = new String[flowers.size()];
-        for (int i = 0; i < flowersToString.length; i++) {
-            flowersToString[i] = "\n" + flowers.get(i).toString();
-        }
+        String[] flowersToString = FlowerCollections.listToStringArray(flowers);
 
         System.out.println("Collection items before encrypting:");
         System.out.println(Arrays.toString(flowersToString));
 
         System.out.println("\nPlease enter the key value for crypt the collection items:");
         int key = UserInput.inputPositiveOrZeroInt();
-
         CaesarCrypter crypter = new CaesarCrypter(key);
 
         System.out.println("\nEncrypted collection:");
-        String[] encryptedStrings = crypter.encryptText(flowersToString);
+        String[] encryptedStrings = crypter.encrypt(flowersToString);
         System.out.println(Arrays.toString(encryptedStrings));
 
         System.out.println("\n\nDecrypted collection:");
-        String[] decryptedStrings = crypter.decryptText(encryptedStrings);
+        String[] decryptedStrings = crypter.decrypt(encryptedStrings);
         System.out.println(Arrays.toString(decryptedStrings));
     }
 }

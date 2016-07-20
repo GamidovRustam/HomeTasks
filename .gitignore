@@ -1,16 +1,8 @@
-# class files
+# Created by .ignore support plugin (hsz.mobi)
+
 *.class
 
-# other files
-Homeworks.iml
-*.iml
-
-# folder
-src/other/*
-.idea/*
-out/*
-
-
-.idea/
-out/
-src/other/
+/src/other/
+/Homeworks.iml
+/out/
+/.idea/
