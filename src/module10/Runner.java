@@ -1,5 +1,6 @@
 package module10;
 
+import module06.task1.userInput.UserInput;
 import module08.flower.*;
 import module08.flowerUtils.MyColors;
 import module09.crypter.CaesarCrypter;
@@ -16,17 +17,20 @@ public class Runner {
         flowers.add(new Tulip(MyColors.RED, 11));
         flowers.add(new Chamomile(MyColors.YELLOW, 9));
         flowers.add(new Rose(MyColors.BLUE, 19));
+        flowers.add(new Tulip(MyColors.RED, 11));
 
-        System.out.println("Here is some flower collection we want to crypt:\n");
+        System.out.println("Here is some flower collection to crypt:\n");
         for (Flower s : flowers) {
             System.out.println(s.toString());
         }
 
-        CryptFileWriter cryptFileWriter = new CryptFileWriter(7);
-        cryptFileWriter.encryptToFile(flowers);
+        System.out.println("\nPlease enter the key value for crypt the collection items:");
+        int key = UserInput.inputPositiveOrZeroInt();
 
-        cryptFileWriter.decryptFromFileToFile();
+        CryptFileWriter fileCrypter = new CryptFileWriter(key);
+
+        fileCrypter.encryptToFile(flowers);
+        fileCrypter.decryptFromFileToFile();
         System.out.println("\nEncrypted and decrypted files are already saved at project root folder.");
-
     }
 }

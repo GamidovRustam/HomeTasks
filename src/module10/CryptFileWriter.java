@@ -8,31 +8,29 @@ import java.util.List;
 
 public class CryptFileWriter {
     private CaesarCrypter crypter;
-    private String[] encryptedStringArray;
 
     public CryptFileWriter(int key) {
         crypter = new CaesarCrypter(key);
     }
 
-    private String[] encryptListToStringArray(List list) {
-        this.encryptedStringArray = crypter.encrypt(FlowerCollections.listToStringArray(list));
-        return encryptedStringArray;
-    }
-
     public void encryptToFile(List list) throws IOException {
         try (FileWriter writer = new FileWriter(new File("Encrypted list [version " + crypter.getVersion() + "]"))) {
+            String[] encryptedStringArray = crypter.encrypt(FlowerCollections.listToStringArray(list));
 
-            for (String s : encryptListToStringArray(list)) {
+            for (String s : encryptedStringArray) {
                 writer.write(s.toString());
             }
         }
     }
 
     public void decryptFromFileToFile() throws IOException {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("Decrypted list [version " + crypter.getVersion() + "]"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(new File("Encrypted list [version " + crypter.getVersion() + "]")));
+             BufferedWriter writer = new BufferedWriter(new FileWriter(new File("Decrypted list [version " + crypter.getVersion() + "]")))) {
 
-            for (String s : encryptedStringArray) {
-                writer.write(crypter.decrypt(s.toString()));
+            String nextLine;
+
+            while ((nextLine = reader.readLine()) != null) {
+                writer.write(crypter.decrypt(nextLine) + "\n");
             }
         }
     }
