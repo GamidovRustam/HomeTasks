@@ -12,26 +12,18 @@ public class CaesarCrypter {
     private final char LOW_CASE_Z = 'z';
     private final int NUMBER_OF_LETTERS = 26;
     private final int KEY;
-    private static Map<Integer, Integer> versionKeys;
-    private static int version;
-
 
     public CaesarCrypter(int key) {
         this.KEY = validateKey(key);
     }
 
     private char validateKey(int key) {
-        version++;
-        versionKeys = new HashMap<>();
-        versionKeys.put(version, key);
 
         if (key > NUMBER_OF_LETTERS) {
             key = key % NUMBER_OF_LETTERS;
         }
         return (char) key;
     }
-
-
 
     public List<String> encrypt(List list) {
         List<String> encryptedList = new ArrayList<>(list.size());
@@ -123,7 +115,4 @@ public class CaesarCrypter {
         return KEY;
     }
 
-    public static int getVersion() {
-        return version;
-    }
 }
