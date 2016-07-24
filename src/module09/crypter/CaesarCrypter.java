@@ -1,9 +1,7 @@
 package module09.crypter;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class CaesarCrypter {
     private final char UP_CASE_A = 'A';
@@ -51,13 +49,13 @@ public class CaesarCrypter {
 
             if (chars[i] >= UP_CASE_A && chars[i] <= UP_CASE_Z) {
                 if (chars[i] + KEY > UP_CASE_Z) {
-                    encryptedChars[i] = (char) (UP_CASE_A + ((chars[i] + KEY) % UP_CASE_Z));
+                    encryptedChars[i] = (char) (UP_CASE_A + (((chars[i] + KEY) % UP_CASE_Z))-1);
                 } else {
                     encryptedChars[i] = (char) (chars[i] + KEY);
                 }
             } else if (chars[i] >= LOW_CASE_A && chars[i] <= LOW_CASE_Z) {
                 if (chars[i] + KEY > LOW_CASE_Z) {
-                    encryptedChars[i] = (char) (LOW_CASE_A + (((chars[i] + KEY) % LOW_CASE_Z)));
+                    encryptedChars[i] = (char) (LOW_CASE_A + (((chars[i] + KEY) % LOW_CASE_Z))-1);
                 } else {
                     encryptedChars[i] = (char) (chars[i] + KEY);
                 }
@@ -94,13 +92,13 @@ public class CaesarCrypter {
 
             if (text[i] >= UP_CASE_A && text[i] <= UP_CASE_Z) {
                 if (text[i] - KEY < UP_CASE_A) {
-                    decodedText[i] = (char) (UP_CASE_Z - (UP_CASE_A % (text[i] - KEY)));
+                    decodedText[i] = (char) ((UP_CASE_Z - (UP_CASE_A % (text[i] - KEY)))+1);
                 } else {
                     decodedText[i] = (char) (text[i] - KEY);
                 }
             } else if (text[i] >= LOW_CASE_A && text[i] <= LOW_CASE_Z) {
                 if (text[i] - KEY < LOW_CASE_A) {
-                    decodedText[i] = (char) (LOW_CASE_Z - (LOW_CASE_A % (text[i] - KEY)));
+                    decodedText[i] = (char) ((LOW_CASE_Z - (LOW_CASE_A % (text[i] - KEY)))+1);
                 } else {
                     decodedText[i] = (char) (text[i] - KEY);
                 }

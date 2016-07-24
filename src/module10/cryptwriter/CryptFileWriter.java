@@ -24,13 +24,14 @@ public class CryptFileWriter extends CaesarCrypter {
     }
 
     public void encryptFileToFile(File from, File to) throws IOException {
-        try (BufferedReader reader = new BufferedReader(new FileReader(new File(String.valueOf(from))));
-             BufferedWriter writer = new BufferedWriter(new FileWriter(new File(String.valueOf(to))))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(new File(String.valueOf(from))))) {
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter(new File(String.valueOf(to))))) {
 
-            String nextLine;
+                String nextLine;
 
-            while ((nextLine = reader.readLine()) != null) {
-                writer.write(encrypt(nextLine) + "\n");
+                while ((nextLine = reader.readLine()) != null) {
+                    writer.write(encrypt(nextLine) + "\n");
+                }
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
